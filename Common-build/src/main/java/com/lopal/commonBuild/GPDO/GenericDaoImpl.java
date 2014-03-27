@@ -37,6 +37,10 @@ public class GenericDaoImpl<T extends DomainObject> implements GenericDao<T> {
 		this.sessionFactory.getCurrentSession().flush();
 	}
 	
+	public void update(T object) {
+		this.sessionFactory.getCurrentSession().update(object);
+	}
+	
 	public void delete(T object) {
 		this.sessionFactory.getCurrentSession().delete(object);
 	}
