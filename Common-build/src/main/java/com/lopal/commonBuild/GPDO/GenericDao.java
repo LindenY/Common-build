@@ -10,6 +10,8 @@ public interface GenericDao<T extends DomainObject> {
 	
 	public void save(T object);
 	
+	public void update(T object);
+	
 	public void delete(T object);
 
 }
